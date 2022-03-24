@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CustomerMenuController">
+   <children>
+      <VBox prefHeight="400.0" prefWidth="1000.0">
+         <children>
+            <HBox prefHeight="340.0" prefWidth="1000.0" spacing="20.0">
+               <children>
+                  <TableView fx:id="customerTableView" prefHeight="340.0" prefWidth="1000.0">
+                    <columns>
+                      <TableColumn fx:id="customerIdCol" text="CustomerId" />
+                      <TableColumn fx:id="customerNameCol" prefWidth="140.0" text="CustomerName" />
+                        <TableColumn fx:id="customerAddressCol" prefWidth="180.0" text="Address" />
+                        <TableColumn fx:id="customerAddress2Col" prefWidth="180.0" text="Address2" />
+                        <TableColumn fx:id="customerCityCol" prefWidth="140.0" text="City" />
+                        <TableColumn fx:id="customerCountryCol" prefWidth="140.0" text="Country" />
+                        <TableColumn fx:id="customerPhoneCol" prefWidth="140.0" text="Phone Number" />
+                    </columns>
+                  </TableView>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="60.0" prefWidth="1000.0" spacing="40.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#onActionDisplayCreateCustomerMenu" text="Create" />
+                  <Button mnemonicParsing="false" onAction="#onActionEditCustomer" text="Edit" />
+                  <Button mnemonicParsing="false" onAction="#onActionDeleteCustomer" text="Delete" />
+                  <Button mnemonicParsing="false" onAction="#onActionDisplayMainMenu" text="Back" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

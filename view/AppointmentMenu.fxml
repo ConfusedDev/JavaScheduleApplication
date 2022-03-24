@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AppointmentMenuController">
+   <children>
+      <VBox prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <HBox prefHeight="340.0" prefWidth="600.0" spacing="20.0">
+               <children>
+                  <TableView fx:id="appointmentTableView" prefHeight="340.0" prefWidth="600.0">
+                    <columns>
+                      <TableColumn fx:id="appointmentIdCol" prefWidth="100.0" text="AppointmentId" />
+                      <TableColumn fx:id="appointmentCustomerCol" prefWidth="100.0" text="Customer" />
+                        <TableColumn fx:id="appointmentTypeCol" prefWidth="100.0" text="Type" />
+                        <TableColumn fx:id="appointmentLocationCol" prefWidth="100.0" text="Location" />
+                        <TableColumn fx:id="appointmentDescriptionCol" prefWidth="199.0" text="Description" />
+                    </columns>
+                  </TableView>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="60.0" prefWidth="600.0" spacing="40.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#onActionDisplayCreateAppointmentMenu" text="Create" />
+                  <Button mnemonicParsing="false" onAction="#onActionDisplayEditAppointmentMenu" text="Edit" />
+                  <Button mnemonicParsing="false" onAction="#onActionDeleteAppointment" text="Delete" />
+                  <Button mnemonicParsing="false" onAction="#onActionDisplayMainMenu" text="Back" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

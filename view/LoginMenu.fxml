@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="300.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginMenuController">
+   <children>
+      <VBox prefHeight="300.0" prefWidth="300.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="74.0" prefWidth="300.0">
+               <children>
+                  <Label fx:id="userNameLbl" text="Username" />
+                  <TextField fx:id="userNameTxt" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="64.0" prefWidth="300.0">
+               <children>
+                  <Label fx:id="passwordLbl" text="Password" />
+                  <TextField fx:id="passwordTxt" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="86.0" prefWidth="300.0">
+               <children>
+                  <Label fx:id="userTimeZoneLbl" text="Time Zone">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children></HBox>
+            <HBox alignment="CENTER_RIGHT" layoutX="10.0" layoutY="148.0" prefHeight="66.0" prefWidth="300.0" spacing="10.0">
+               <children>
+                  <Button fx:id="signInBtn" mnemonicParsing="false" onAction="#onActionSignIn" text="Sign In" />
+                  <Button fx:id="exitBtn" mnemonicParsing="false" onAction="#onActionExit" text="Exit" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

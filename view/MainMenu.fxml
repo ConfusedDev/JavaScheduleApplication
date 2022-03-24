@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="300.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainMenuController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="300.0" prefWidth="300.0" spacing="20.0">
+         <children>
+            <Button maxWidth="200.0" mnemonicParsing="false" onAction="#onActionDisplayCustomerMenu" text="Customers" />
+            <Button maxWidth="200.0" mnemonicParsing="false" onAction="#onActionDisplayAppointmentMenu" text="Appointments" />
+            <Button maxWidth="200.0" mnemonicParsing="false" onAction="#onActionDisplayCalendarView" text="Calendar" />
+            <Button maxWidth="200.0" mnemonicParsing="false" onAction="#onActionExit" text="Exit" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

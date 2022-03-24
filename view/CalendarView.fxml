@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CalendarViewController">
+   <children>
+      <VBox prefHeight="600.0" prefWidth="1200.0">
+         <children>
+            <TableView fx:id="appointmentTableView" prefHeight="540.0" prefWidth="600.0">
+              <columns>
+                  <TableColumn fx:id="appointmentIdCol" prefWidth="60.0" text="ID" />
+                <TableColumn fx:id="appointmentTitleCol" prefWidth="120.0" text="Title" />
+                <TableColumn fx:id="appointmentDescriptionCol" prefWidth="200.0" text="Description" />
+                  <TableColumn fx:id="appointmentTypeCol" prefWidth="120.0" text="Type" />
+                  <TableColumn fx:id="appointmentLocationCol" prefWidth="120.0" text="Location" />
+                  <TableColumn fx:id="appointmentContactCol" prefWidth="160.0" text="Contact" />
+                  <TableColumn fx:id="appointmentStartCol" prefWidth="140.0" text="Start" />
+                  <TableColumn fx:id="appointmentEndCol" prefWidth="140.0" text="End" />
+                  <TableColumn fx:id="customerIdCol" prefWidth="100.0" text="C. ID" />
+              </columns>
+            </TableView>
+            <HBox alignment="CENTER" prefHeight="60.0" prefWidth="600.0" spacing="40.0">
+               <children>
+                  <RadioButton fx:id="allToggle" mnemonicParsing="false" onAction="#handleAllToggle" text="All">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="calendarFilterToggle" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="monthlyToggle" mnemonicParsing="false" onAction="#handleMonthlyToggle" text="Monthly" toggleGroup="$calendarFilterToggle" />
+                  <RadioButton fx:id="weeklyToggle" mnemonicParsing="false" onAction="#handleWeeklyToggle" text="Weekly" toggleGroup="$calendarFilterToggle" />
+                  <Label fx:id="customerReportLabel" text="Customers" />
+                  <Button mnemonicParsing="false" onAction="#onActionGetContactSchedule" text="Contact Schedule" />
+                  <Button mnemonicParsing="false" onAction="#onActionGetCustomerSchedule" text="Customer Schedule" />
+                  <Button mnemonicParsing="false" onAction="#onActionGenerateTypesReport" text="Appointment Types Report" />
+                  <Button mnemonicParsing="false" onAction="#onActionDisplayMainMenu" text="Back" />
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets left="20.0" right="20.0" top="10.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>
